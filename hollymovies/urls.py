@@ -24,5 +24,5 @@ admin.site.register(Movie)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/<s>', hello),
+    path('hello', hello),
 ]
