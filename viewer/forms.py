@@ -15,7 +15,7 @@ class MovieForm(ModelForm):
         fields = '__all__'
 
     title = CharField(validators=[capitalized_validator])
-    rating = IntegerField(max_value=1, min_value=10)
+    rating = IntegerField(min_value=1, max_value=10)
     released = PastMonthField()
     def clean_description(self):
         initial = self.cleaned_data['description']
