@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
 from viewer.models import Movie
 from viewer.forms import MovieForm
@@ -32,4 +32,8 @@ class MovieUpdateView(UpdateView):
       return super().form_invalid(form)
 
 
+class MovieDeleteView(DeleteView):
+   template_name = 'delete_movie.html'
+   success_url = reverse_lazy('index')
+   model = Movie
 
