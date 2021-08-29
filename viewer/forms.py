@@ -5,7 +5,7 @@ from django.forms import (
 
 from viewer.models import Genre
 
-from viewer.validators import  PastMonthField,
+from viewer.validators import  PastMonthField
 from django.core.exceptions import ValidationError
 import re
 
